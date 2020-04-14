@@ -6,15 +6,17 @@ What is done?
 4. rwlock
 5. mutex lock
 
-1. spinlock : Test_spinlock.c
+Run ./test.sh to run test case per synchronization primitive Change persmissions by chmod 777 test.sh
+
+1. spinlock : Test_spinlock.c 
 testcase:
 >$cc Test_spinlock.c -o try1 -lpthread  #compile
 >$./try1  #execute
 Example o/p:
 c = 12644105 c1+c2 = 12644105 c1 = 5688085 c2 = 6956020
 
-2. semaphores : Test_semaphore.c 
-testcase:
+2. semaphores : Test_semaphore.c  (for counting semaphore only) and test_sem.c (for binary semaphore only)
+testcase for counting semaphore:
 >$cc Test_semaphore.c -o try -lpthread
 >$./try
 Exampele o/p:
