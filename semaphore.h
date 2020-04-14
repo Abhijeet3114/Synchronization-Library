@@ -31,7 +31,7 @@ void sem_init(semaphore *s) {
 }
 void block(semaphore *s) {
 	spinunlock(&(s->sl));
-    syscall(__NR_futex, &s->futex, FUTEX_WAIT, s->futex, NULL, 0, 0);
+    syscall(__NR_futex, &s->sl.val, FUTEX_WAIT, s->futex, NULL, 0, 0);
 	return;
 }
 void wait(semaphore *s) {
@@ -49,7 +49,7 @@ void signal(semaphore *s) {
 	spinlock(&(s->sl));
 	(s->val)++;
 	//Wait Queue
-	syscall(__NR_futex, &s->futex, FUTEX_WAKE, 1, NULL, 0, 0);
+	syscall(__NR_futex, &s->sl.val, FUTEX_WAKE, 1, NULL, 0, 0);
 	//enq(q, x); // Add dequed process to Ready Queue
 	spinunlock(&(s->sl));
 	return;
