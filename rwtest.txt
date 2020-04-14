@@ -1,0 +1,16 @@
+Obtaining read lock.
+Obtained read lock.
+Obtaining read lock.
+Obtained read lock.
+Obtaining write lock.
+Obtaining write lock.
+Releasing read lock.
+Released read lock.
+Releasing read lock.
+Released read lock.
+Obtained write lock.
+Releasing write lock.
+Released write lock.
+Obtained write lock.
+Releasing write lock.
+Released write lock.
