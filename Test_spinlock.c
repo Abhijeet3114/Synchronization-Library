@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <pthread.h>
 #include<unistd.h>
-#include"spinlock.c"
+#include"spinlock.h"
 long c = 0, c1 = 0, c2 = 0, run = 1;
 int flag = 0;
 spinlock_t sl;	//spinlock initialization
