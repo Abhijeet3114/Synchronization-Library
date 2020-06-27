@@ -18,7 +18,7 @@ typedef struct condition
     mutex *m;
     int pointer; //pointer or address of the process or thread
     int count;
-    mutex_t mut;
+    //mutex_t mut;
     spinlock_t sl;
     semaphore sem;
 }condition;
